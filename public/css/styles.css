@@ -88,7 +88,6 @@ nav ul li a {
 
 .civ-display-container {
     display: flex;
-
 }
 
 .character-page-display {
@@ -149,4 +148,44 @@ nav ul li a {
 .unique-display {
     display: flex;
     flex-direction: column;
+}
+
+#club-welcome {
+    margin-left: 20px;
+}
+
+.main-blog-page {
+    display: flex;
+    justify-content: space-around;
+}
+
+.aside {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+}
+
+#new-blog {
+    display: flex;
+    flex-direction: column;
+}
+
+#blog-content {
+    height: 200px;
+}
+
+#main-blog-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 60%;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.post {
+    border: 1px solid black;
+    width: 500px;
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 10px;
 }

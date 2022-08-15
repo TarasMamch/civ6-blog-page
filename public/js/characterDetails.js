@@ -37,7 +37,6 @@ async function setPage() {
         data = await JSON.parse(localStorage.getItem('special'))
     }
     let KeyName = window.localStorage.key(data)
-    console.log(data, data2)
 
     if (KeyName == 'leader') {
         charIcon.setAttribute('src', data.leaders[0].icon)
@@ -48,7 +47,7 @@ async function setPage() {
         charBonus.innerHTML = data.leaders[0].leader_bonus
 
         charBio.innerHTML = data.leaders[0].bio
-        civAbilityName.innerHTML = data.ability_name
+        civAbilityName.innerHTML = `Civilization Ability : ${data.ability_name}`
         civAbility.innerHTML = data.ability
         unitIcon.setAttribute('src', data.unit.icon)
         unitName.innerHTML = data.unit.name
@@ -68,7 +67,7 @@ async function setPage() {
         charBonus.innerHTML = data.leaders[1].leader_bonus
 
         charBio.innerHTML = data.leaders[1].bio
-        civAbilityName.innerHTML = data.ability_name
+        civAbilityName.innerHTML = `Civilization Ability : ${data.ability_name}`
         civAbility.innerHTML = data.ability
         unitIcon.setAttribute('src', data.unit.icon)
         unitName.innerHTML = data.unit.name
@@ -90,7 +89,7 @@ async function setPage() {
         charBonus.innerHTML = data.leaders[0].leader_bonus
 
         charBio.innerHTML = data.leaders[0].bio
-        civAbilityName.innerHTML = data.ability_name
+        civAbilityName.innerHTML = `Civilization Ability : ${data.ability_name}`
         civAbility.innerHTML = data.ability
         unitIcon.setAttribute('src', data.unit.icon)
         unitName.innerHTML = data.unit.name
@@ -104,15 +103,15 @@ async function setPage() {
         data = await JSON.parse(localStorage.getItem('special2'))
         civIcon2.setAttribute('src', data.icon)
         civName2.innerHTML = data.name
-        civAbilityName2.innerHTML = data.ability_name
+        civAbilityName2.innerHTML = `Civilization Ability : ${data.ability_name}`
         civAbility2.innerHTML = data.ability
         unitIcon2.setAttribute('src', data.unit.icon)
         unitName2.innerHTML = data.unit.name
-        unitAbility2.innerHTML = data.unit.ability
+        unitAbility2.innerHTML = `Unit Ability : ${data.unit.ability}`
         unitDesc2.innerHTML = data.unit.description
         buldingIcon2.setAttribute('src', data.building.icon)
         buildingName2.innerHTML = data.building.name
-        buildingAblility2.innerHTML = data.building.ability
+        buildingAblility2.innerHTML = `Building Ability : ${data.building.ability}`
         buildingDesc2.innerHTML = data.building.description
 
         window.localStorage.clear()

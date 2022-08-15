@@ -46,7 +46,6 @@ async function setCharacterPage(name) {
     const civs = await response.json()
     const response2 = await fetch("http://localhost:3003/api/leaders")
     const leaders = await response2.json()
-    console.log(civs)
 
     if (name == 'Teddy Roosevelt (Rough Rider)') {
         const a = []

@@ -24,14 +24,18 @@
 </div>
 </div>
 <h1 id="club-welcome">Welcome, {{username}}</h1>
-<main>
-    <article></article>
-    <aside>
+<main class="main-blog-page">
+    <article id="main-blog-container"></article>
+    <div class="aside">
         <h3>Make a Post</h3>
         <form action="submit" id="new-blog">
             <input type="text" placeholder="title" id="title">
             <input type="text" placeholder="blog-content" id="blog-content">
             <button>Submit</button>
         </form>
-    </aside>
+    </div>
+
+
 </main>
+
+<script src="/js/blog.js"></script>

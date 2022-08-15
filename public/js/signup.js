@@ -1,6 +1,4 @@
-//Signup form
 document.querySelector("#signup").addEventListener("submit", e => {
-    console.log("signup button pressed");
     e.preventDefault();
     const userObj = {
         username: document.querySelector("#signup-name").value,
@@ -16,20 +14,10 @@ document.querySelector("#signup").addEventListener("submit", e => {
         }
     }).then(res => {
         if (res.ok) {
-            return res.json()
+            console.log("new user is created!");
+            location.href = "/login";
         } else {
-            alert("trumpet sound")
+            alert("failed to register");
         }
-        // if (res.ok) {
-        //     console.log("new user is created!");
-        //     location.href = "/secretclub";
-        // } else {
-        //     alert("failed to register");
-        //     location.href = "/";
-        // }
     })
-        .then(res => {
-            console.log("just json", { res });
-            location.href = "/secretclub";
-        })
 });

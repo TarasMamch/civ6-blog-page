@@ -4,26 +4,17 @@ document.querySelector("#login-form").addEventListener("submit", e => {
         email: document.querySelector("#login-email").value,
         password: document.querySelector("#login-password").value,
     }
-    console.log("inside js frontend");
     fetch("/api/users/login", {
         method: "POST",
         body: JSON.stringify(userObj),
         headers: {
             "Content-Type": "application/json"
         }
+    }).then(res => {
+        if (res.ok) {
+            location.href = "/"
+        } else {
+            alert("invalid login credentials")
+        }
     })
-        .then((res) => {
-            console.log("raw", { res });
-            if (res.ok) {
-                return res.json()
-            } else {
-                alert("trumpet sound")
-            }
-        })
-        .then(res => {
-            console.log("just json", { res });
-            location.href = "/secretclub";
-
-
-        }).catch(err => { console.error(err); });
 })

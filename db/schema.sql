@@ -1,0 +1,5 @@
+DROP DATABASE IF EXISTS civ_db;
+
+CREATE DATABASE civ_db;
+
+USE civ_db;
