@@ -12,9 +12,14 @@ document.querySelector("#login-form").addEventListener("submit", e => {
         }
     }).then(res => {
         if (res.ok) {
-            location.href = "/"
+            location.href = "/forum"
         } else {
             alert("invalid login credentials")
         }
     })
+})
+
+document.querySelector('#sign-up').addEventListener('click', e => {
+    e.preventDefault()
+    location.href = "/signup"
 })

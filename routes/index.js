@@ -17,7 +17,6 @@ router.get('/login', (req, res) => {
 
 router.get("/logout", (req, res) => {
     req.session.destroy();
-    res.json({ msg: "logged out!" })
 })
 
 router.get('/signup', (req, res) => {

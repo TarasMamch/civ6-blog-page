@@ -17,7 +17,7 @@ router.post("/", (req, res) => {
     Post.create({
         title: req.body.title,
         content: req.body.content,
-        //ADD UserId
+        UserId: req.session.user.id,
     }).then(data => {
         res.json(data)
     }).catch(err => {

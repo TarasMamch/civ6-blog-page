@@ -4,7 +4,6 @@ const seedCivs = require('./civ-seeds');
 const seedLeaderCiv = require('./leaderciv-seeds');
 const seedUnits = require('./unit-seeds');
 const seedBuildings = require('./building-seeds');
-const seedUsers = require('./user-seeds')
 
 
 const seedAll = async () => {
@@ -25,7 +24,7 @@ const seedAll = async () => {
 
     await seedLeaderCiv()
     console.log('\n----- LEADERCIVS SEEDED -----\n')
-    await seedUsers()
+
     console.log('\n----- ALL IS DONE, EXITING -----\n')
 
     process.exit(0);

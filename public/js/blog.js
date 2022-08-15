@@ -2,10 +2,8 @@ document.querySelector("#new-blog").addEventListener("submit", e => {
     e.preventDefault();
     const blogObj = {
         title: document.querySelector("#title").value,
-        content: document.querySelector("#blog-content").value,
-        //ADD USERID
+        content: document.querySelector("#blog-content").value
     }
-    console.log(blogObj);
     fetch("/api/posts", {
         method: "POST",
         body: JSON.stringify(blogObj),
@@ -26,7 +24,7 @@ async function generatePosts() {
     const response = await fetch('http://localhost:3003/api/posts')
     const data = await response.json()
 
-    for (i = 0; i < data.length; i++) {
+    for (i = data.length - 1; i >= 0; i--) {
         const divEl = document.createElement('div')
         const userInfo = document.createElement('span')
         const title = document.createElement('h3')
@@ -43,5 +41,6 @@ async function generatePosts() {
         divEl.appendChild(content)
     }
 }
+
 
 generatePosts()
